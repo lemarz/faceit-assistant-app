@@ -1,0 +1,11 @@
+#root {
+  font-family: 'Manrope', sans-serif;
+  color: white;
+  background-color: #20242a;
+  height: 100vh;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}

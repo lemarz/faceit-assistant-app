@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b3038;
+  min-height: 56px;
+  border-radius: 1px;
+}
+.header__logo {
+  display: flex;
+}
+
+.header__name {
+  font-family: 'Michroma', sans-serif;
+  color: white;
+  font-size: 24px;
+  line-height: 16px;
+  font-weight: bold;
+  margin: auto;
+  text-decoration: none;
+}
+
+.header__logo-img {
+  height: 36px;
+  width: 36px;
+  background-image: url(../../src/images/logo.svg);
+  background-size: 100% 100%;
+  margin: 10px 30px;
+}
+
+.header__auth {
+  margin: 0 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+.header__auth-status {
+  margin: 0;
+}
+
+.token__auth-input {
+  color: white;
+  border: 1px solid #444;
+  background: transparent;
+  outline: 0;
+  outline-offset: 0;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.header__auth-button {
+  margin: 0 25px;
+}

@@ -1,0 +1,45 @@
+.main {
+  margin: 30px 300px;
+  background-color: #20242a;
+  display: grid;
+  grid-template-columns: 200px 5fr;
+  grid-column-gap: 100px;
+}
+
+.main__nav {
+}
+
+.main__nav-bar {
+  background-color: #252a31;
+  margin: 0;
+  border-radius: 2px;
+  padding: 17px 0;
+}
+
+.main__nav-list {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.main__nav-link {
+  color: white;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.main__nav-link:hover {
+  color: rgba(255, 255, 255, 0.7);
+  transition-duration: 0.4s;
+}
+
+.main__content {
+  background-color: #252a31;
+  border-radius: 2px;
+  width: 100%;
+  padding: 30px;
+}

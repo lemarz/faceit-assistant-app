@@ -1,1 +1,9 @@
 @import url(./blocks/vendor/normalize.css);
+@import url('https://fonts.googleapis.com/css?family=Manrope');
+@import url('https://fonts.googleapis.com/css?family=Michroma');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import url(./blocks/app.css);
+@import url(./blocks/header.css);
+@import url(./blocks/main.css);
+@import url(./blocks/form.css);
