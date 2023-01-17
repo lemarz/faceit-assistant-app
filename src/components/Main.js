@@ -1,6 +1,7 @@
-import React from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
-import GetId from './GetId';
+import React from 'react'
+import { Link, Route, Routes } from 'react-router-dom'
+import GetId from './GetId'
+import CommonMatches from './CommonMatches'
 
 const Main = () => {
   return (
@@ -17,16 +18,22 @@ const Main = () => {
               Узнать Id
             </Link>
           </li>
+          <li className='main__nav-list'>
+            <Link to='/common-matches' className='main__nav-link'>
+              Общие матчи
+            </Link>
+          </li>
         </ul>
       </nav>
       <div className='main__content'>
         <Routes>
           <Route path='/' element={<></>} />
           <Route path='/get-id' element={<GetId />} />
+          <Route path='/common-matches' element={<CommonMatches />} />
         </Routes>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Main;
+export default Main

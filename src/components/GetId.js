@@ -19,9 +19,9 @@ const GetId = () => {
         setId(res)
       })
       .catch((err) => {
-        if (err === 'Ошибка: 404') {
+        if (err.status === 404) {
           setError('Пользователь не найден')
-        } else if (err === 'Ошибка: 401') {
+        } else if (err.status === 401) {
           setError('Не авторизованно')
         } else {
           setError(err)
@@ -62,15 +62,9 @@ const GetId = () => {
           Получить
         </Button>
       </form>
-      <div className='getid__result'>
-        {id ? (
-          <div className='getid__result-title'>
-            Id Игрока {nickInputRef.current.value}
-          </div>
-        ) : (
-          ''
-        )}
-        <div className='getid__result-id'>{id}</div>
+      <div className='result'>
+        {id ? <div className='result__title'>Id Игрока</div> : ''}
+        <div className='result__id-field'>{id}</div>
       </div>
     </>
   )

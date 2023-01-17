@@ -1,0 +1,33 @@
+.result {
+  margin: 20px;
+  text-align: center;
+}
+
+.result__title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.result__id-field {
+  text-align: center;
+}
+
+.result__cards {
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.result__card {
+  text-align: center;
+}
+
+.result__card-title {
+}
+
+.result__button-matchroom {
+  color: #ff5722;
+  border-color: #ff5722;
+}
