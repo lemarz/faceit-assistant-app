@@ -21,7 +21,7 @@ logs
 .vscode
 .env.local
 .env.development.local
-.env.test.local
+.env.nickname.local
 .env.production.local
 
 npm-debug.log*

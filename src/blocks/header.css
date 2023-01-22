@@ -46,6 +46,7 @@
   outline-offset: 0;
   padding: 2px;
   border-radius: 3px;
+  margin: 0 15px;
 }
 
 .header__auth-button {
@@ -62,7 +63,6 @@
   }
 
   .header__auth {
-    margin-bottom: 10px;
     gap: 20px;
   }
 
@@ -84,6 +84,20 @@
 
 @media screen and (max-width: 767px) {
   .header {
+    flex-direction: column;
+  }
+
+  .header__auth {
+    margin-bottom: 10px;
+  }
+
+  .header__auth-button {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .header__auth {
     flex-direction: column;
   }
 }

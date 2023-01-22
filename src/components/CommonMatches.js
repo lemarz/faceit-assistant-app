@@ -1,8 +1,12 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import { Button, Card } from 'react-bootstrap'
 import api from '../utils/Api'
 
+import { Context } from '../utils/context'
+
 const CommonMatches = () => {
+  const { nickname } = useContext(Context)
+
   const firstPlayerRef = useRef()
   const secondPlayerRef = useRef()
 
@@ -13,7 +17,7 @@ const CommonMatches = () => {
   const [firstPlayerError, setFirstPlayerError] = useState('')
   const [secondPlayerError, setSecondPlayerError] = useState('')
 
-  const setValidity = () => {
+  const setButtonValidity = () => {
     if (
       firstPlayerRef.current.value.length > 2 &&
       secondPlayerRef.current.value.length > 2
@@ -126,24 +130,38 @@ const CommonMatches = () => {
     )
   }
 
+  const fillNicknameInput = () => {
+    firstPlayerRef.current.value = nickname
+    setButtonValidity()
+  }
+
   return (
     <>
       <h3 className='form__title'>Найти совместные матчи</h3>
       <form className='form'>
         <div className='form__input-area'>
+          {nickname && (
+            <Button
+              className='form__nick-button'
+              variant='outline-success'
+              onClick={fillNicknameInput}
+            >
+              ↓ {nickname} ↓
+            </Button>
+          )}
           <input
             className='form__input'
-            placeholder='Ник первого игрока'
+            placeholder='Ник первого игрока...'
             type='text'
-            onInput={setValidity}
+            onInput={setButtonValidity}
             ref={firstPlayerRef}
           />
           <span className='form__input-error'>{firstPlayerError}</span>
           <input
             className='form__input'
-            placeholder='Ник второго игрока'
+            placeholder='Ник второго игрока...'
             type='text'
-            onInput={setValidity}
+            onInput={setButtonValidity}
             ref={secondPlayerRef}
           />
           <span className='form__input-error'>{secondPlayerError}</span>

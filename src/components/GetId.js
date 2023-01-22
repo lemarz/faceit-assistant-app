@@ -1,8 +1,11 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import { Button } from 'react-bootstrap'
 import api from '../utils/Api'
+import { Context } from '../utils/context'
 
 const GetId = () => {
+  const { nickname } = useContext(Context)
+
   const [id, setId] = useState('')
   const [error, setError] = React.useState('')
   const [isButtonValid, setIsButtonValid] = React.useState(false)
@@ -32,6 +35,11 @@ const GetId = () => {
       })
   }
 
+  const fillNicknameInput = () => {
+    nickInputRef.current.value = nickname
+    setButtonValidity()
+  }
+
   const setButtonValidity = () => {
     nickInputRef.current.value.length > 2
       ? setIsButtonValid(true)
@@ -43,9 +51,18 @@ const GetId = () => {
       <h3 className='form__title'>Получить ID игрока</h3>
       <form className='form'>
         <div className='form__input-area'>
+          {nickname && (
+            <Button
+              className='form__nick-button'
+              variant='outline-success'
+              onClick={fillNicknameInput}
+            >
+              ↓ {nickname} ↓
+            </Button>
+          )}
           <input
             className='form__input'
-            placeholder='Ник игрока'
+            placeholder='Ник игрока...'
             type='text'
             onInput={setButtonValidity}
             ref={nickInputRef}

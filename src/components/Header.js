@@ -1,14 +1,19 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useContext } from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { Context } from '../utils/context'
 
 const Header = () => {
+  const { nickname, setNickname } = useContext(Context)
+
   const [isAuth, setIsAuth] = useState(false)
   const tokenInputRef = useRef()
+  const nicknameInputRef = useRef()
 
   useEffect(() => {
     if (localStorage.getItem('token')) {
       setIsAuth(true)
+      setNickname(localStorage.getItem('faceitNickname'))
       const token = localStorage.getItem('token')
 
       if (localStorage.getItem('token').length === 36) {
@@ -22,10 +27,12 @@ const Header = () => {
   const onAuthClick = () => {
     if (!isAuth) {
       localStorage.setItem('token', tokenInputRef.current.value)
+      localStorage.setItem('faceitNickname', nicknameInputRef.current.value)
       window.location.reload()
     } else {
       setIsAuth(false)
       localStorage.removeItem('token')
+      localStorage.removeItem('faceitNickname')
     }
   }
 
@@ -39,15 +46,24 @@ const Header = () => {
       </div>
       <div className='header__auth'>
         {isAuth ? (
-          <p className='header__auth-status'>Authorized</p>
+          <p className='header__auth-status'>Authorized {nickname}</p>
         ) : (
-          <input
-            className='token__auth-input'
-            type='password'
-            placeholder='Enter your API token...'
-            ref={tokenInputRef}
-            required
-          />
+          <>
+            <input
+              className='token__auth-input'
+              type='text'
+              placeholder='Faceit nickname...'
+              ref={nicknameInputRef}
+              required
+            />
+            <input
+              className='token__auth-input'
+              type='password'
+              placeholder='API token...'
+              ref={tokenInputRef}
+              required
+            />
+          </>
         )}
 
         <Button
