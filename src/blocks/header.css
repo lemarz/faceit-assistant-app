@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.header__name {
+.header__tittle {
   font-family: 'Michroma', sans-serif;
   color: white;
   font-size: 24px;
@@ -50,4 +50,40 @@
 
 .header__auth-button {
   margin: 0 25px;
+}
+
+@media screen and (max-width: 1023px) {
+  .header__auth {
+    margin: 0;
+  }
+
+  .header__auth-button {
+    margin: 0;
+  }
+
+  .header__auth {
+    margin-bottom: 10px;
+    gap: 20px;
+  }
+
+  .header {
+    gap: 10px;
+    justify-content: space-around;
+  }
+
+  .header__logo-img {
+    margin: 15px 15px 15px 0;
+  }
+
+  .header__tittle {
+    font-size: 20px;
+    line-height: 16px;
+    font-weight: normal;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+  }
 }

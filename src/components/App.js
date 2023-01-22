@@ -1,6 +1,6 @@
-import React from 'react';
-import Header from './Header';
-import Main from './Main';
+import React from 'react'
+import Header from './Header'
+import Main from './Main'
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Header />
       <Main />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -38,3 +38,9 @@
   line-height: 15px;
   margin-bottom: 7px;
 }
+
+@media screen and (max-width: 767px) {
+  .form__title {
+    font-size: 24px;
+  }
+}

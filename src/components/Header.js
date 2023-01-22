@@ -1,39 +1,39 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react'
+import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
-  const [isAuth, setIsAuth] = useState(false);
-  const tokenInputRef = useRef();
+  const [isAuth, setIsAuth] = useState(false)
+  const tokenInputRef = useRef()
 
   useEffect(() => {
     if (localStorage.getItem('token')) {
-      setIsAuth(true);
-      const token = localStorage.getItem('token');
+      setIsAuth(true)
+      const token = localStorage.getItem('token')
 
       if (localStorage.getItem('token').length === 36) {
-        console.log(`Good Token (${token})`);
+        console.log(`Good Token (${token})`)
       } else {
-        console.error(`BAD Token (${token})`);
+        console.error(`BAD Token (${token})`)
       }
     }
-  }, []);
+  }, [])
 
   const onAuthClick = () => {
     if (!isAuth) {
-      localStorage.setItem('token', tokenInputRef.current.value);
-      window.location.reload();
+      localStorage.setItem('token', tokenInputRef.current.value)
+      window.location.reload()
     } else {
-      setIsAuth(false);
-      localStorage.removeItem('token');
+      setIsAuth(false)
+      localStorage.removeItem('token')
     }
-  };
+  }
 
   return (
     <div className='header'>
       <div className='header__logo'>
         <Link to='/' className='header__logo-img'></Link>
-        <Link to='/' className='header__name'>
+        <Link to='/' className='header__tittle'>
           Faceit Assistant
         </Link>
       </div>
@@ -59,7 +59,7 @@ const Header = () => {
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

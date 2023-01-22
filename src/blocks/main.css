@@ -1,9 +1,9 @@
 .main {
-  margin: 30px 300px;
+  margin: 30px 5vw 50px 50px;
   background-color: #20242a;
   display: grid;
-  grid-template-columns: 200px 5fr;
-  grid-column-gap: 100px;
+  grid-template-columns: 175px 5fr;
+  grid-column-gap: 5vw;
 }
 
 .main__nav {
@@ -14,6 +14,7 @@
   margin: 0;
   border-radius: 2px;
   padding: 17px 0;
+  min-width: 175px;
 }
 
 .main__nav-list {
@@ -42,4 +43,17 @@
   border-radius: 2px;
   width: 100%;
   padding: 30px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1023px) {
+  .main {
+    grid-template-columns: none;
+    grid-template-rows: 175px 5fr;
+    margin: 0;
+  }
+
+  .main__content {
+    padding: 20px 20px;
+  }
 }
