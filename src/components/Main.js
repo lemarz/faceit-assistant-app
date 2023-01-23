@@ -1,30 +1,13 @@
 import React from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import GetId from './GetId'
 import CommonMatches from './CommonMatches'
+import Nav from './Nav'
 
 const Main = () => {
   return (
     <div className='main'>
-      <nav className='main__nav'>
-        <ul className='main__nav-bar'>
-          <li className='main__nav-list'>
-            <Link to='/ ' className='main__nav-link'>
-              Главная
-            </Link>
-          </li>
-          <li className='main__nav-list'>
-            <Link to='/get-id' className='main__nav-link'>
-              Узнать Id
-            </Link>
-          </li>
-          <li className='main__nav-list'>
-            <Link to='/common-matches' className='main__nav-link'>
-              Общие матчи
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <Nav />
       <div className='main__content'>
         <Routes>
           <Route path='/' element={<></>} />
