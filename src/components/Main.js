@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import GetId from './GetId'
 import CommonMatches from './CommonMatches'
 import Nav from './Nav'
+import MapStats from './MapStats'
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
           <Route path='/' element={<></>} />
           <Route path='/get-id' element={<GetId />} />
           <Route path='/common-matches' element={<CommonMatches />} />
+          <Route path='/map-stats' element={<MapStats />} />
         </Routes>
       </div>
     </div>

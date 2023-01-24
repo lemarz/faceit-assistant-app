@@ -46,7 +46,6 @@ const CommonMatches = () => {
     })
 
     if (!anyCommonMatches) {
-      console.log('Поменял стейт на тру')
       setNoOneJointMatch(true)
     }
   }

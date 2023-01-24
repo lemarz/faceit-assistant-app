@@ -20,6 +20,11 @@ const Nav = () => {
             Общие матчи
           </Link>
         </li>
+        <li className='main__nav-list'>
+          <Link to='/map-stats' className='main__nav-link'>
+            Статистика карт
+          </Link>
+        </li>
       </ul>
     </nav>
   )

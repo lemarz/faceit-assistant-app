@@ -31,3 +31,20 @@
   color: #ff5722;
   border-color: #ff5722;
 }
+
+.result__table-nickname {
+  text-align: center;
+  max-width: 100px;
+  word-wrap: break-word;
+  vertical-align: middle;
+}
+
+.result__table-stats {
+  padding: 3px;
+  vertical-align: middle;
+}
+
+.result__table-paragraph {
+  margin: 4px 0;
+  vertical-align: middle;
+}

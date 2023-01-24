@@ -33,6 +33,12 @@ class Api {
       headers: this._headers,
     }).then(this._handleResponse)
   }
+
+  matchInfo(matchRoomId) {
+    return fetch(`${this._baseUrl}/matches/${matchRoomId}`, {
+      headers: this._headers,
+    }).then(this._handleResponse)
+  }
 }
 
 // * Экземпляр Api

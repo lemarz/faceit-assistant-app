@@ -19,7 +19,7 @@ const Header = () => {
       if (localStorage.getItem('token').length === 36) {
         console.log(`Good Token (${token})`)
       } else {
-        console.error(`BAD Token (${token})`)
+        console.warn(`BAD Token (${token})`)
       }
     }
   }, [])
