@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/faceit-assistant-app/static/css/main.f9a54602.css",
-    "main.js": "/faceit-assistant-app/static/js/main.d5fb387c.js",
+    "main.css": "/faceit-assistant-app/static/css/main.339cdc76.css",
+    "main.js": "/faceit-assistant-app/static/js/main.69aec7a9.js",
     "index.html": "/faceit-assistant-app/index.html",
     "static/media/logo.svg": "/faceit-assistant-app/static/media/logo.c2303ad3bab7d061df71.svg",
-    "main.f9a54602.css.map": "/faceit-assistant-app/static/css/main.f9a54602.css.map",
-    "main.d5fb387c.js.map": "/faceit-assistant-app/static/js/main.d5fb387c.js.map"
+    "main.339cdc76.css.map": "/faceit-assistant-app/static/css/main.339cdc76.css.map",
+    "main.69aec7a9.js.map": "/faceit-assistant-app/static/js/main.69aec7a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9a54602.css",
-    "static/js/main.d5fb387c.js"
+    "static/css/main.339cdc76.css",
+    "static/js/main.69aec7a9.js"
   ]
 }
